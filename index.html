@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地址发布页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background: linear-gradient(180deg, #0a192f 0%, #112240 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        /* 背景气泡动画 */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(100, 150, 255, 0.15);
+            animation: float 12s infinite ease-in-out;
+        }
+        @keyframes float {
+            0%,100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+            50% { transform: translateY(-80px) translateX(20px); opacity: 0.6; }
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px 25px;
+            max-width: 380px;
+            width: 100%;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+            position: relative;
+            z-index: 10;
+        }
+        h1 {
+            font-size: 20px;
+            color: #222;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        h2 {
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .tip {
+            font-size: 13px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 18px;
+        }
+        .runtime {
+            font-size: 13px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .link-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        .link-text {
+            font-size: 14px;
+            color: #333;
+        }
+        .link-sub {
+            font-size: 12px;
+            color: #888;
+        }
+        .link-btn {
+            background: #ff7a28;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 18px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .link-btn:hover {
+            background: #ff6600;
+        }
+        .warn {
+            font-size: 12px;
+            color: #ff4444;
+            text-align: center;
+            margin: 20px 0 10px;
+        }
+        .addr {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 8px;
+            word-break: break-all;
+        }
+        .note {
+            font-size: 12px;
+            color: #777;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .footer-bar {
+            background: #fff3cd;
+            color: #856404;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+        .copyright {
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景气泡 -->
+    <div class="bubble" style="width:60px;height:60px;top:10%;left:15%"></div>
+    <div class="bubble" style="width:80px;height:80px;top:30%;left:75%"></div>
+    <div class="bubble" style="width:40px;height:40px;top:60%;left:25%"></div>
+    <div class="bubble" style="width:70px;height:70px;top:75%;left:65%"></div>
+
+    <div class="card">
+        <h1>地址发布页</h1>
+        <h2>星漫次元</h2>
+        <p class="tip">请 Ctrl+D 收藏本页到浏览器收藏夹回家不迷路</p>
+        <p class="runtime" id="runtime">本站运营时间：--</p>
+
+        <div class="link-row">
+            <div>
+                <div class="link-text">绅游大全</div>
+                <div class="link-sub">千万绅士游戏立即领取</div>
+            </div>
+            <button class="link-btn" onclick="window.open('https://www.baidu.com','_blank')">打开</button>
+        </div>
+
+        <div class="link-row">
+            <div>
+                <div class="link-text">破解软件</div>
+                <div class="link-sub">所有司机破解软件大全</div>
+            </div>
+            <button class="link-btn" onclick="window.open('https://www.bilibili.com','_blank')">打开</button>
+        </div>
+
+        <div class="link-row">
+            <div>
+                <div class="link-text">电影网站</div>
+                <div class="link-sub">稀有😍电影快速观看</div>
+            </div>
+            <button class="link-btn" onclick="window.open('https://github.com','_blank')">打开</button>
+        </div>
+
+        <div class="link-row">
+            <div>
+                <div class="link-text">标题四</div>
+                <div class="link-sub">副标题四</div>
+            </div>
+            <button class="link-btn" onclick="window.open('https://www.qq.com','_blank')">网站四</button>
+        </div>
+
+        <div class="link-row">
+            <div>
+                <div class="link-text">标题五</div>
+                <div class="link-sub">副标题五</div>
+            </div>
+            <button class="link-btn" onclick="window.open('https://www.163.com','_blank')">网站五</button>
+        </div>
+
+        <div class="link-row">
+            <div>
+                <div class="link-text">标题六</div>
+                <div class="link-sub">副标题六</div>
+            </div>
+            <button class="link-btn" onclick="window.open('https://www.weibo.com','_blank')">网站六</button>
+        </div>
+
+        <p class="warn">收藏本站永久地址：https://www.baidu.com/，防止失联！</p>
+        <p class="addr">网站域名经常更新，防止网站打不开,本站仅对成年用户开放!</p>
+        <p class="note">请务必收藏此页，永久有效！本站仅对成年用户开放!</p>
+
+        <div class="footer-bar">请把本站添加到书签</div>
+        <div class="copyright">© 2026 . All Rights Reserved</div>
+    </div>
+
+    <script>
+        // 模拟运营时间（可改成你自己的建站日期）
+        function updateRuntime() {
+            const start = new Date('2026-03-05 21:06:00'); // 改成你的建站时间
+            const now = new Date();
+            const diff = now - start;
+            const days = Math.floor(diff / (1000*60*60*24));
+            const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+            const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
+            const secs = Math.floor((diff % (1000*60)) / 1000);
+            document.getElementById('runtime').textContent =
+                `本站运营时间：${days}天${hours}小时${mins}分${secs}秒`;
+        }
+        updateRuntime();
+        setInterval(updateRuntime, 1000);
+    </script>
+</body>
+</html>
